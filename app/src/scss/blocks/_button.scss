@@ -1,0 +1,28 @@
+.button {
+	border: 1px solid white;
+	background-color: transparent;
+	color: white;
+	padding: 7px;
+	font-family: 'PTSans';
+	font-size: 14px;
+	outline: none;
+	white-space: nowrap; 
+	transition: .2s ease-in-out;
+
+	&:hover {
+		background-color: white;
+		color: black;
+		border-color: white;
+	}
+
+	&--m-top {
+		margin-top: 7%;
+	}
+	&--footer {
+		margin: 0 5px 5px 0;
+		background-color: gray;
+		border-color: gray;
+		font-size: 0.6em;
+
+	}
+}

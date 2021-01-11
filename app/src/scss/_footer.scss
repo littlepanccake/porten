@@ -1,0 +1,118 @@
+.footer {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 4% 17%;
+	background-image: url(../img/footer-img.png);
+	background-position: center;
+	background-size: cover;
+
+	&__title {
+		font-family: 'PlayFairDisplaySC';
+		font-size: normal;
+		font-size: 1em;
+		margin-bottom: 10%;
+		color: white;
+	}
+	&__block {
+		width: 30%;
+		padding: 0 3%;
+
+	}
+	&__block:last-child {
+		margin: 0;
+	}
+	&__list {
+		width: 100%;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	&__text {
+		color: white;
+		font-family: "PTSans";
+		font-size: 0.7em;
+	}
+}
+.form {
+		display: flex;
+		flex-direction: column;
+		outline: none;
+		width: 60%;
+		margin: 10% auto;
+
+		&__input {
+			background-color: rgba(255, 255, 255, 0.4);
+			box-sizing: content-box;
+			border: none;
+			color: lightgray;
+			padding: 7% 5%;
+		}
+		&__input:focus {
+			outline: thin solid white;
+			outline-offset: -1px;
+		}
+		&__input::-webkit-input-placeholder {
+			color: lightgray;
+			font-size: 90%;
+		}
+		&__button {
+			font-size: 0.9em;
+			background-color: #0F0F0F;
+			border: 1px solid #0F0F0F;
+			color: white;
+			padding: 5%;
+			font-family: 'PTSans';
+			white-space: nowrap;
+			transition: .2s ease-in-out;
+			outline: none;
+		}
+		&__button:hover {
+			background-color: lightgray; 
+			border-color: lightgray;
+			color: gray;
+		}
+	}
+
+	@media all and (max-width: 1300px){
+		.form {
+			width: auto;
+		}
+	}
+
+	@media all and (max-width: 760px) {
+		.footer {
+			flex-direction: column;
+			align-items: center;
+
+
+			&__title {
+				text-align: center;
+				margin: 0;
+				padding: 20px 0;
+				// border-top: 1px solid gray;
+			}
+			&__block {
+				margin-bottom: 40px;
+				width: 100%;
+			}
+			&__list{
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			&__text {
+				text-align: center;
+			}
+
+		}
+		.form {
+			width: 60%;
+			&__input {
+				padding: 5%;
+			}
+		}
+	}
+		

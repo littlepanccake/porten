@@ -1,0 +1,214 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	font-family: "PTSans";
+	font-weight: normal;
+	box-sizing: border-box;
+
+	&__info { 
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 100%;
+		color: gray;
+		font-size: 12px;
+		height: 44px;
+		padding: 0 15%;
+		background-color: black;
+
+	}
+	&__info-block{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 15px;
+	}
+	&__info-text {
+			display: inline;
+			white-space: nowrap;
+			padding: 0 3px;
+			text-decoration: none;
+			color: gray;
+			transition: .3s;
+	}
+	&__info a:hover{
+		color: white;
+	}
+	&__nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 100%;
+		height: 80px;
+		background-color: #0F0F0F;
+		padding: 0 16vw; 
+		transition: 0.3s ease-in-out;
+	}
+	&__nav-logo {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		color: white;
+		font-family: 'PostNoBillsJaffna';
+		font-weight: bold;
+		font-size: 36px;
+		padding: 0 10px;
+		transition: .3s ease-in-out;
+	}
+	&__nav-logo:hover {
+		color: gray;
+	}
+	&__nav-link-list {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 100%;
+		font-family: 'PTSans';
+		font-weight: normal;
+
+	}
+	&__nav-link {
+		display: flex;
+		align-items: center;
+		padding: 0 10px;
+		white-space: nowrap;
+		height: 100%;
+		color: gray;
+		text-decoration: none;
+		font-size: 0.9em;
+		transition: .3s ease-out
+	}
+	&__nav-link:hover {
+		background-color: #1F1F1F;
+		color: white;
+		
+	}
+	&__nav-button-list {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 100%;
+		font-family: 'PTSans';
+		font-weight: normal;
+	}
+	&__nav-button {
+		display: flex;
+		align-items: center;
+		padding: 0 20px;
+		background-color: transparent;
+		white-space: nowrap;
+		height: 100%;
+		outline: none;
+		border: none;
+		font-size: 0.9em;
+		transition: .3s ease-out
+	}
+	&__nav-button:hover {
+		background-color: #1F1F1F;
+
+	}
+	&.sticky .header__nav {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 20;
+		width: 100%;
+		box-sizing: border-box;
+		height: 60px;
+	}
+}
+
+
+
+@media all and (max-width: 860px) {
+    .header {
+    	display: none;
+
+	    	&.active {
+	    		position: fixed;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+				height: 100vh;
+				padding: 5% 0 5% 0;
+				z-index: 1;
+				background-color: rgba(15, 15, 15, 1);
+				animation: unroll .6s ease-in-out;
+			}
+			@keyframes unroll {
+				0% {
+					height: 0vh;
+				}
+				100% {
+					height: 100vh;
+				}
+			}
+			&.active .header__info{
+				background-color: transparent;
+				flex-direction: column;
+				padding: 0;
+				animation: showing 1.2s ease-in-out;
+			}
+			&.active .header__nav {
+				position: static;
+				flex-direction: column;
+				justify-content: space-evenly;
+				background-color: transparent;
+				height: auto;
+				animation: showing 1.4s ease-in-out;
+			}
+			@keyframes showing {
+				0%, 50% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			&.active .header__nav-logo {
+	 			height: auto;
+	 			font-size: 60px;
+			}
+			&.active .header__nav-link-list {
+				height: 100%;
+				margin-top: 5%;
+				flex-direction: column;
+				justify-content: space-evenly;
+			}
+			&.active .header__nav-link {
+				justify-content: center;
+				padding: 15px 10px;
+				width: 100%;
+				font-size: 1em;
+			}
+			&.active .header__nav-button-list {
+				height: 10vh;
+				margin-top: 10%;
+			}
+			&.active .header__nav-button {
+				box-sizing: border-box;
+				padding: 0 29px;			}
+
+		}
+
+    }
+    @media all and (max-width: 360px) {
+    	.header {
+    		&.active .header__info {
+    			height: 54px;
+    			align-items: space-between;
+    		}
+    		&.active .header__info-block {
+    			align-items: flex-start;
+    		}
+    		&.active .header__info-text {
+    			text-align: center;
+    			white-space: normal;
+    		}
+    	}
+    }
+
+

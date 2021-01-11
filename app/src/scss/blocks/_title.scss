@@ -1,0 +1,28 @@
+.title {
+	position: relative;
+	font-size: 25px;
+	font-family: 'PlayfairDisplaySC';
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	margin-bottom: 60px;
+	white-space: nowrap;
+
+	&:after {
+		position: absolute;
+		content: '';
+		height: 1px;
+		width: 120px;
+		background-color: white;
+		right: calc(50% - 60px);
+		top: calc(100% + 30px);
+	}
+
+	&--fw-normal {
+		font-weight: normal;
+	}
+
+}
+
+
+

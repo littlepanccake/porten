@@ -1,0 +1,118 @@
+.section-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	box-sizing: border-box;
+	background-image: url(../img/description-img.png);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	height: 100vh;
+	background-position: center;
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+		box-sizing:border-box;
+		justify-content: center;
+		align-items: center;
+		margin-top: 125px;
+		padding: 0 10%;
+		width: 80%;
+		color: #FFFFFF;
+		font-family: 'PTSans';
+		text-transform: uppercase;
+		font-size: 16px;
+
+	}
+	&__block-logo {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 70px 50px;
+		box-sizing: border-box;
+		border: 4px solid white;
+		margin-bottom: 70px;
+		
+		
+	}
+	&__block-logo-1 {
+		position: relative;
+		text-align: center;
+		margin-bottom: 20px;
+		font-family: 'PostNoBillsJaffna';
+		font-size: 4em;
+		line-height: 80px;
+
+	}
+	&__block-logo-1:after{
+		position: absolute;
+		content: '';
+		height: 1px;
+		width: 180px;
+		left: calc(50% - 90px);
+		top: calc(50% + 40px);
+		background-color: white;
+	}
+	&__block-logo-2 {
+		white-space: nowrap;
+		text-align: center;
+
+	}
+	&__block-description {
+		text-align: center;
+
+	}
+}
+@media all and (max-width: 860px) {
+	.section-1 {
+		&__block {
+			margin-top: 10vh;
+		}
+	}
+}
+
+@media all and (max-width: 500px) {
+	.section-1 {
+		&__block {
+			margin-top: 20vh;
+		}
+	}
+}
+
+@media all and (max-width: 425px) {
+	.section-1 {
+		&__block-logo {
+			width: 100%;
+		}
+		&__block {
+			margin-top: 10vh;
+			width: 100%;
+		}
+		&__block-description {
+			font-size: 0.9em;
+
+		}
+	}
+}
+
+@media all and (max-width: 350px) {
+	.section-1 {
+		&__block-logo {
+			margin-bottom: 20px;
+		}
+		&__block-description {
+			font-size: 0.8em;
+
+		}
+	}
+}
+	
+
+
+
+
+
+

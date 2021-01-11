@@ -1,0 +1,40 @@
+.section-5 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	background-color: #0F0F0F;
+	box-sizing: border-box;
+	padding: 5% 25%;
+
+	&__block {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	&__block-img {
+		width: 30%;
+	}
+}
+
+@media all and (max-width: 750px) {
+	.section-5 {
+
+		&__block {
+			flex-direction: column;
+			align-items: center;
+		}
+		&__block-img {
+			width: 70%;
+			padding-bottom: 20px;
+		}
+	}
+}
+@media all and (max-width: 350px) {
+ 	.section-5 {
+ 		&__block-img {
+			width: 100%;
+			padding-bottom: 20px;
+		}
+ 	}
+}
+
+
